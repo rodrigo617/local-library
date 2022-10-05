@@ -20,6 +20,7 @@ const mongoose = require("mongoose");
 const dev_db_url =
   "mongodb+srv://myUserName:Password123@cluster0.fwgg2iz.mongodb.net/?retryWrites=true&w=majority";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
+console.log("mongo URI:",process.env.MONGODB_URI, mongoDB);
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
