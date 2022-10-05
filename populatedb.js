@@ -18,7 +18,8 @@ var BookInstance = require('./models/bookinstance')
 
 
 var mongoose = require('mongoose');
-var mongoDB = userArgs[0];
+//var mongoDB = userArgs[0];
+var mongoDB = "mongodb+srv://myUserName:Password123@cluster0.fwgg2iz.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
